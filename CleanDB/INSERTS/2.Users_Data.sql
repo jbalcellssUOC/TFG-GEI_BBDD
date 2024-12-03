@@ -1,6 +1,6 @@
 BEGIN TRANSACTION
 
-USE [UOCTFG_codi365]
+USE [UOCTFG_codis365]
 GO
 INSERT [dbo].[AppUsers] ([UserId], [Login], [Password], [Name], [Surname], [Phone], [Address], [Comments], [IsAdmin], [Is2FAEnabled], [IsBlocked], [TokenID], [TokenIssuedUTC], [TokenExpiresUTC], [TokenIsValid], [Retries], [APIToken], [IsoDateC], [IsoDateM]) VALUES (N'279bd4ef-a6a5-4c9e-b50e-212128d39ff8', N'test@codis365.cat', N'$2a$11$CSNAnu2ZWlYqnHstR5SWA.snlXhwTpsmUWk/EopLvfPsDsxL/Cg0G', N'Test', N'User', N'', N'', N'', 0, 0, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL)
 INSERT [dbo].[AppUsers] ([UserId], [Login], [Password], [Name], [Surname], [Phone], [Address], [Comments], [IsAdmin], [Is2FAEnabled], [IsBlocked], [TokenID], [TokenIssuedUTC], [TokenExpiresUTC], [TokenIsValid], [Retries], [APIToken], [IsoDateC], [IsoDateM]) VALUES (N'a7a1f868-2cac-4c0d-9c01-5a01832cb4d0', N'jbalcellss@uoc.edu', N'$2a$11$7BWfeM21F4PHg7h6W5UyEu8ABqHaO/gLhUV54L3AbZFZYJ9B2.DO.', N'Jordi Balcells', N'Balcells', N'+34 670625628', N'Pedro Muñoz Seca, 4, 28110, Algete (Madrid)', N'', 1, 0, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL)
