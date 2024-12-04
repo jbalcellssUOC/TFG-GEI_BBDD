@@ -1,6 +1,6 @@
 BEGIN TRANSACTION
 
-USE [UOCTFG_codi365]
+USE [UOCTFG_codis365]
 GO
 INSERT [dbo].[AppUsers] ([UserId], [Login], [Password], [Name], [Surname], [Phone], [Address], [Comments], [IsAdmin], [Is2FAEnabled], [IsBlocked], [TokenID], [TokenIssuedUTC], [TokenExpiresUTC], [TokenIsValid], [Retries], [APIToken], [IsoDateC], [IsoDateM]) VALUES (N'279bd4ef-a6a5-4c9e-b50e-212128d39ff8', N'test@codis365.cat', N'$2a$11$CSNAnu2ZWlYqnHstR5SWA.snlXhwTpsmUWk/EopLvfPsDsxL/Cg0G', N'Test', N'User', N'', N'', N'', 0, 0, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL)
 INSERT [dbo].[AppUsers] ([UserId], [Login], [Password], [Name], [Surname], [Phone], [Address], [Comments], [IsAdmin], [Is2FAEnabled], [IsBlocked], [TokenID], [TokenIssuedUTC], [TokenExpiresUTC], [TokenIsValid], [Retries], [APIToken], [IsoDateC], [IsoDateM]) VALUES (N'a7a1f868-2cac-4c0d-9c01-5a01832cb4d0', N'jbalcellss@uoc.edu', N'$2a$11$7BWfeM21F4PHg7h6W5UyEu8ABqHaO/gLhUV54L3AbZFZYJ9B2.DO.', N'Jordi Balcells', N'Balcells', N'+34 670625628', N'Pedro Muñoz Seca, 4, 28110, Algete (Madrid)', N'', 1, 0, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL)
@@ -10,6 +10,16 @@ INSERT [dbo].[AppUsers] ([UserId], [Login], [Password], [Name], [Surname], [Phon
 INSERT [dbo].[AppUsers] ([UserId], [Login], [Password], [Name], [Surname], [Phone], [Address], [Comments], [IsAdmin], [Is2FAEnabled], [IsBlocked], [TokenID], [TokenIssuedUTC], [TokenExpiresUTC], [TokenIsValid], [Retries], [APIToken], [IsoDateC], [IsoDateM]) VALUES (N'ab4ecfab-91ba-4f72-9cbf-d506c60d7083', N'test@test.es', N'$2a$11$0YnOz2XBmqZh92wBQAbow.rR9YNiIlFMz1GI82UCXoAfzXZ/xg9Yi', N'Jordi', NULL, NULL, NULL, NULL, 0, 0, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL)
 INSERT [dbo].[AppUsers] ([UserId], [Login], [Password], [Name], [Surname], [Phone], [Address], [Comments], [IsAdmin], [Is2FAEnabled], [IsBlocked], [TokenID], [TokenIssuedUTC], [TokenExpiresUTC], [TokenIsValid], [Retries], [APIToken], [IsoDateC], [IsoDateM]) VALUES (N'2e7bf0d0-6753-4f54-b881-dc9dd517da7e', N'demoadmin@codis365.cat', N'$2a$11$CSNAnu2ZWlYqnHstR5SWA.snlXhwTpsmUWk/EopLvfPsDsxL/Cg0G', N'Demo', N'Admin', N' ', N' ', N' ', 1, 0, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL)
 INSERT [dbo].[AppUsers] ([UserId], [Login], [Password], [Name], [Surname], [Phone], [Address], [Comments], [IsAdmin], [Is2FAEnabled], [IsBlocked], [TokenID], [TokenIssuedUTC], [TokenExpiresUTC], [TokenIsValid], [Retries], [APIToken], [IsoDateC], [IsoDateM]) VALUES (N'e13399d0-21f2-4bf9-965f-f14c3ce30658', N'demo@codis365.cat', N'$2a$11$J354lU3fMGmmrOQVqy1bmuYM3lhtdTj5a8LIJMtNguSpOdcLa2ORq', N'Codis365 Demo', N'', N'', N'', N'', 0, 0, 0, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL)
+GO
+
+SET IDENTITY_INSERT [dbo].[AppUsersRoles] ON 
+
+INSERT [dbo].[AppUsersRoles] ([Id], [UserId], [Role]) VALUES (2, N'850f9bc6-de34-416c-bfc1-859c06c5db27', N'10')
+INSERT [dbo].[AppUsersRoles] ([Id], [UserId], [Role]) VALUES (3, N'a7a1f868-2cac-4c0d-9c01-5a01832cb4d0', N'20')
+INSERT [dbo].[AppUsersRoles] ([Id], [UserId], [Role]) VALUES (4, N'e13399d0-21f2-4bf9-965f-f14c3ce30658', N'10')
+INSERT [dbo].[AppUsersRoles] ([Id], [UserId], [Role]) VALUES (6, N'7f1869ab-82ea-4f7a-a55a-930ff1e5a33a', N'20')
+
+SET IDENTITY_INSERT [dbo].[AppUsersRoles] OFF
 GO
 
 --ROLLBACK
